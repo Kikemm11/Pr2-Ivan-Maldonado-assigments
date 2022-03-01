@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<br>
+
+<table class="table table-dark table-striped">
+	<div id="companies">
+	  <% @companies.each do |company| %>
+	  	<tr>
+	  		<td>
+			    <%= render company %>
+			    <p>
+			      <%= link_to "Show this company", company, class:"btn btn-secondary" %>
+			    </p>
+			  <% end %>
+			</td>
+		</tr>
+	</div>
+</table>
+
+<%= link_to "New company", new_company_path, class:"btn btn-dark" %>

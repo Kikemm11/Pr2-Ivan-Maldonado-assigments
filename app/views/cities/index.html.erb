@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cities</h1>
+
+<br/>
+
+<table class="table table-dark table-striped">
+			<div id="cities">
+	  <% @cities.each do |city| %>
+		<tr>
+		  	<td>
+			    <%= render city %>
+			   	<p>
+			      <%= link_to "Show details of this city", city, class:"btn btn-secondary" %>
+			    </p>
+			 </td>
+		 </tr>
+	 	 <% end %>
+		</div>
+</table>
+
+<br/>
+
+<%= link_to "Add new city", new_city_path, class:"btn btn-dark" %>

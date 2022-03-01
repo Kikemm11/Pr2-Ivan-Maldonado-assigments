@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>States</h1>
+
+<br/>
+
+<table class="table table-dark table-striped">
+			<div id="states">
+	  <% @states.each do |state| %>
+		<tr>
+		  	<td>
+			    <%= render state %>
+			   	<p>
+			      <%= link_to "Show details of this state", state, class:"btn btn-secondary" %>
+			    </p>
+			 </td>
+		 </tr>
+	 	 <% end %>
+		</div>
+</table>
+
+<br/>
+
+<%= link_to "Add new state", new_state_path, class:"btn btn-dark" %>
